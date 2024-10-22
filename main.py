@@ -35,6 +35,8 @@ bot = Client(
 
 @bot.on_message(filters.command(["start"]))
 async def start(bot: Client, m: Message):
+    await message.reply_sticker("CAACAgUAAxkBAAEBzMdnF6a4Qj1lVp78C_LBw2v0fLR3LAACCgADwSQxMQxd6ZP7f4SuHgQ") 
+    await asyncio.sleep(1)
     await m.reply_text(f"<b>Hello {m.from_user.mention} 👋\n\nI Am A Bot For Downloading Links From Your **.txt** File And Then Upload That File On Telegram So Basically If You Want To Use Me First Send Me /Amit Command And Then Follow Few Steps..\n\nUse /stop to stop any ongoing task.</b>")
 
 
