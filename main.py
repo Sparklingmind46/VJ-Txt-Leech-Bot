@@ -35,7 +35,7 @@ bot = Client(
 
 @bot.on_message(filters.command(["start"]))
 async def start(bot: Client, m: Message):
-    await m.reply_text(f"<b>Hello {m.from_user.mention} 👋\n\n I Am A Bot For Download Links From Your **.TXT** File And Then Upload That File On Telegram So Basically If You Want To Use Me First Send Me /upload Command And Then Follow Few Steps..\n\nUse /stop to stop any ongoing task.</b>")
+    await m.reply_text(f"<b>Hello {m.from_user.mention} 👋\n\n I Am A Bot For Download Links From Your **.TXT** File And Then Upload That File On Telegram So Basically If You Want To Use Me First Send Me /Amit Command And Then Follow Few Steps..\n\nUse /stop to stop any ongoing task.</b>")
 
 
 @bot.on_message(filters.command("stop"))
@@ -45,7 +45,7 @@ async def restart_handler(_, m):
 
 
 
-@bot.on_message(filters.command(["upload"]))
+@bot.on_message(filters.command(["amit"]))
 async def upload(bot: Client, m: Message):
     editable = await m.reply_text('𝕤ᴇɴᴅ ᴛxᴛ ғɪʟᴇ ⚡️')
     input: Message = await bot.listen(editable.chat.id)
@@ -182,10 +182,10 @@ async def upload(bot: Client, m: Message):
                 
                 elif ".pdf" in url:
                     try:
-                        cmd = f'yt-dlp -o "{name}.pdf" "{url}"'
+                        cmd = f'yt-dlp -o "{name}.pdf By-ᴛᴇᴀᴍ sᴀᴛ" "{url}"'
                         download_cmd = f"{cmd} -R 25 --fragment-retries 25"
                         os.system(download_cmd)
-                        copy = await bot.send_document(chat_id=m.chat.id, document=f'{name}.pdf', caption=cc1)
+                        copy = await bot.send_document(chat_id=m.chat.id, document=f'{name}.pdf By-ᴛᴇᴀᴍ sᴀᴛ', caption=cc1)
                         count += 1
                         os.remove(f'{name}.pdf')
                     except FloodWait as e:
