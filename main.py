@@ -22,7 +22,7 @@ from pyrogram import Client, filters
 from pyrogram.types import Message
 from pyrogram.errors import FloodWait
 from pyrogram.errors.exceptions.bad_request_400 import StickerEmojiInvalid
-from pyrogram.types.messages_and_media_reply_sticker import message
+from pyrogram.types.messages_and_media import message
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
 
@@ -36,7 +36,7 @@ bot = Client(
 @bot.on_message(filters.command(["start"]))
 async def start(bot: Client, m: Message):
     await message.reply_sticker("CAACAgUAAxkBAAEBzMdnF6a4Qj1lVp78C_LBw2v0fLR3LAACCgADwSQxMQxd6ZP7f4SuHgQ") 
-    await asyncio.sleep(1)
+    await asyncio.sleep(3)
     await m.reply_text(f"<b>Hello {m.from_user.mention} 👋\n\nI Am A Bot For Downloading Links From Your **.txt** File And Then Upload That File On Telegram So Basically If You Want To Use Me First Send Me /Amit Command And Then Follow Few Steps..\n\nUse /stop to stop any ongoing task.</b>")
 
 
